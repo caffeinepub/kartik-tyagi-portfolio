@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Professional portfolio website for a performance marketing specialist featuring green/black/white theme, case studies (VRH Derma and Award-Wala), optimized resume loading, and ROI-focused content",
+  "architectural_notes": [
+    "Color system: Green (#0f7b3f) primary, Black secondary, White background with subtle black stripe accents",
+    "Resume optimization: Direct file link in root directory, target='_blank', preload in head, compressed <1MB",
+    "Profile image: Single circular instance in hero section with shadow",
+    "Section order: Hero → Experience → Results → Case Studies → Services → Certifications → Contact"
+  ],
+  "known_issues": [],
+  "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Professional headshot of Kartik Tyagi with circular crop, center aligned, subtle shadow, high resolution (profile-photo.dim_400x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-update-the-entire-color-theme-to-a-green-black-white-system-use-clean-white-background-ffffff-deep-professional-green-0f7b3f-as-primary-accent-strong-black-000000-as-secondary-accent-black-for-headings-dark-grey-for-paragraph-text-green-filled-primary-buttons-with-white-text-and-black-border-outline-buttons-with-hover-transition-to-green-fill-remove-all-orange-tones-grey-background-panels-unless-subtle-section-separation-and-soft-pastel-effects-add-subtle-black-stripe-design-accents-in-section-dividers-or-headers-thin-horizontal-stripe-lines-maintain-clean-minimal-aesthetic-strong-contrast-and-professional-business-look",
+      "title": "Update the entire color theme to a Green + Black + White system: Use clean white background (#ffffff), deep professional green (#0f7b3f) as primary accent, strong black (#000000) as secondary accent, black for headings, dark grey for paragraph text, green filled primary buttons with white text, and black border outline buttons with hover transition to green fill. Remove all orange tones, grey background panels (unless subtle section separation), and soft pastel effects. Add subtle black stripe design accents in section dividers or headers (thin horizontal stripe lines). Maintain clean minimal aesthetic, strong contrast, and professional business look.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-profile-image-with-the-new-professional-headshot-profile-pic-001-png-apply-circular-crop-ensure-high-resolution-center-align-in-hero-section-remove-any-duplicate-profile-images-from-other-sections-photo-should-appear-only-once-on-the-page-and-add-subtle-shadow-under-the-image-for-depth-do-not-change-hero-structure-or-typography",
+      "title": "Replace the current profile image with the new professional headshot (profile pic 001.png). Apply circular crop, ensure high resolution, center align in hero section, remove any duplicate profile images from other sections (photo should appear only once on the page), and add subtle shadow under the image for depth. Do not change hero structure or typography.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-case-study-1-for-vrh-derma-with-the-following-details-client-type-d2c-skincare-brand-industry-dermatology-duration-october-2025-january-2026-problem-high-acquisition-cost-broad-audience-targeting-inconsistent-campaign-performance-and-weak-funnel-structure-strategy-implemented-built-tof-mof-bof-full-funnel-structure-refined-audience-targeting-optimized-ad-creatives-implemented-meta-pixel-tracking-integrated-flipkart-ads-continuous-a-b-testing-budget-6-40-000-total-spend-1-5l-2l-monthly-results-640-roi-40-increase-in-product-sales-improved-lead-quality-stable-scalable-performance-before-vs-after-before-broad-targeting-unstable-performance-after-structured-funnel-improved-roi-consistent-growth-display-in-clean-structured-format",
+      "title": "Add Case Study 1 for VRH Derma with the following details: Client Type: D2C Skincare Brand, Industry: Dermatology, Duration: October 2025 – January 2026, Problem: High acquisition cost, broad audience targeting, inconsistent campaign performance, and weak funnel structure, Strategy Implemented: Built TOF–MOF–BOF full funnel structure, Refined audience targeting, Optimized ad creatives, Implemented Meta Pixel tracking, Integrated Flipkart ads, Continuous A/B testing, Budget: ₹6,40,000+ total spend (₹1.5L–₹2L monthly), Results: 640%+ ROI, 40% increase in product sales, Improved lead quality, Stable scalable performance, Before vs After: Before (Broad targeting, Unstable performance) After (Structured funnel, Improved ROI, Consistent growth). Display in clean structured format.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-case-study-2-for-award-wala-with-the-following-details-client-type-b2b-recognition-awards-business-duration-january-2026-february-2026-problem-required-qualified-business-owner-leads-across-india-strategy-pan-india-meta-lead-campaigns-targeted-decision-makers-business-owners-refined-ad-messaging-for-authority-positioning-structured-budget-allocation-budget-15-000-campaign-spend-results-consistent-b2b-lead-flow-improved-targeting-precision-better-lead-quality-and-filtering-display-in-identical-clean-structured-format-as-case-study-1",
+      "title": "Add Case Study 2 for Award-Wala with the following details: Client Type: B2B Recognition & Awards Business, Duration: January 2026 – February 2026, Problem: Required qualified business owner leads across India, Strategy: Pan-India Meta lead campaigns, Targeted decision-makers & business owners, Refined ad messaging for authority positioning, Structured budget allocation, Budget: ₹15,000 campaign spend, Results: Consistent B2B lead flow, Improved targeting precision, Better lead quality and filtering. Display in identical clean structured format as Case Study 1.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-optimize-resume-opening-speed-by-hosting-resume-pdf-in-the-frontend-public-directory-using-direct-file-link-instead-of-routed-navigation-opening-resume-in-new-tab-using-target-blank-preloading-resume-link-in-head-section-for-faster-access-ensuring-file-size-is-compressed-below-1mb-and-removing-unnecessary-redirect-logic-resume-button-must-open-instantly-without-page-reload-delay",
+      "title": "Optimize resume opening speed by hosting resume.pdf in the frontend/public directory, using direct file link instead of routed navigation, opening resume in new tab using target='_blank', preloading resume link in head section for faster access, ensuring file size is compressed below 1MB, and removing unnecessary redirect logic. Resume button must open instantly without page reload delay.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-uploaded-profile-photo-profile-pic-001-png-as-a-static-asset-in-frontend-public-assets-generated-for-use-as-the-new-profile-image-in-the-hero-section",
+      "title": "Render the uploaded profile photo (profile pic 001.png) as a static asset in frontend/public/assets/generated for use as the new profile image in the hero section.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Update color theme to Green + Black + White system with professional styling",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Replace profile photo with new professional headshot (circular crop, hero section only)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add VRH Derma case study with full metrics and before/after breakdown",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add Award-Wala B2B case study with campaign details",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Optimize resume.pdf loading speed with direct link and preload",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Kartik Tyagi Portfolio",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

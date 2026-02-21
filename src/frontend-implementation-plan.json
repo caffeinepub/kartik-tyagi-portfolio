@@ -1,0 +1,191 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update portfolio with green/black/white theme, new profile photo, case studies, and optimized resume loading",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update entire color theme to Green + Black + White system with clean professional aesthetic",
+      "acceptanceCriteria": [
+        "Background is clean white (#ffffff)",
+        "Primary accent color is deep professional green (#0f7b3f or similar)",
+        "Secondary accent is strong black (#000000)",
+        "Headings use black text, paragraphs use dark grey",
+        "Primary buttons are green with white text",
+        "Outline buttons have black border with hover transition to green fill",
+        "All orange tones are removed",
+        "Grey background panels are removed except subtle section separators",
+        "Subtle black stripe accents appear in section dividers or headers",
+        "Design maintains clean minimal aesthetic with strong contrast"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Replace the warm neutral color palette (off-white background, muted orange accents) with Green + Black + White system. Update CSS custom properties: set background to clean white (#ffffff), primary accent to deep professional green (#0f7b3f), secondary accent to strong black (#000000), headings to black, body text to dark grey (#333333 or #404040). Remove all orange color values. Add utility classes for black stripe design accents (thin horizontal border lines). Maintain existing animation keyframes and reduced-motion support."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Update Tailwind theme configuration to match Green + Black + White system. Replace OKLCH color tokens with new palette: background white, foreground black, primary green (#0f7b3f), accent black. Update button color utilities to support green filled buttons with white text and black outline buttons with green hover fill. Remove any orange or pastel color definitions. Preserve existing animation and typography settings."
+        },
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Update button styling to use green filled primary button with white text for main CTA, and black outline button with hover transition to green fill for secondary action. Ensure background remains clean white and text uses black for headings. Remove any orange accent colors from this component."
+        },
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "modify",
+          "description": "Apply new color theme: use black for section headings, dark grey for paragraph text, white background. Remove any grey background panels. Add subtle black stripe design accent to section header using thin horizontal border line. Update card backgrounds to maintain clean white with subtle separation if needed."
+        },
+        {
+          "path": "frontend/src/components/Results.tsx",
+          "operation": "modify",
+          "description": "Update metric cards to use green accent color for numbers and black for labels. Ensure white background and remove any grey panels. Maintain existing counter animation functionality."
+        },
+        {
+          "path": "frontend/src/components/CaseStudies.tsx",
+          "operation": "modify",
+          "description": "Apply Green + Black + White theme to case study cards: white background, black headings, dark grey body text, green accent for key metrics and highlights. Remove orange button styling. Add black stripe accent to section header. Ensure strong contrast and professional appearance."
+        },
+        {
+          "path": "frontend/src/components/Services.tsx",
+          "operation": "modify",
+          "description": "Update service cards with white background, black headings, dark grey descriptions, and green accent on hover. Remove grey background panels. Add subtle black stripe to section divider."
+        },
+        {
+          "path": "frontend/src/components/CoreSkills.tsx",
+          "operation": "modify",
+          "description": "Apply new theme to skill cards: white background, black text, green hover accent replacing orange. Remove any grey backgrounds. Maintain hover elevation effects."
+        },
+        {
+          "path": "frontend/src/components/ExtendedCapabilities.tsx",
+          "operation": "modify",
+          "description": "Update capability cards with Green + Black + White theme. Replace orange accents with green, ensure white background, black headings, dark grey text. Preserve scroll animation functionality."
+        },
+        {
+          "path": "frontend/src/components/WhyWorkWithMe.tsx",
+          "operation": "modify",
+          "description": "Apply theme updates: white background, black headings, dark grey text, green accent highlights. Remove grey panels. Add black stripe accent to section header."
+        },
+        {
+          "path": "frontend/src/components/Testimonials.tsx",
+          "operation": "modify",
+          "description": "Update testimonial carousel with new color scheme: white background for cards, black text, green navigation button accents replacing orange. Maintain carousel functionality."
+        },
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "modify",
+          "description": "Update contact form styling: green filled submit button with white text replacing muted orange button, black outline for input fields, white background, black labels and headings. Add black stripe accent to section header. Ensure form validation states use green for success."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Apply Green + Black + White theme to footer: white or very subtle grey background, black text, green social media icon hover states. Remove orange accents."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Replace profile image with new professional headshot using circular crop and subtle shadow",
+      "acceptanceCriteria": [
+        "Profile photo uses the uploaded image (profile pic 001.png)",
+        "Image is circular cropped",
+        "Image is high resolution and center aligned in hero section",
+        "Profile photo appears only once on the page (in hero section only)",
+        "Subtle shadow is added under the image",
+        "Hero section structure and typography remain unchanged"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Replace the current profile photo reference with the new generated image at frontend/public/assets/generated/profile-photo.dim_400x400.png. Ensure the image uses circular crop (rounded-full class), is center aligned, and has subtle shadow (use shadow-lg or custom shadow). Verify the image displays at high resolution (400x400 minimum). Remove any duplicate profile image references from other sections if present. Preserve existing hero structure, typography, headline, and CTA buttons. Maintain the floating animation effect on the image."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add Case Study 1 for VRH Derma with complete campaign details and results",
+      "acceptanceCriteria": [
+        "VRH Derma case study is added as Case Study 1",
+        "All specified details are included: client type, industry, duration, problem, strategy, budget, results, before/after",
+        "Case study is displayed in clean structured format matching the design system",
+        "Results prominently display 640%+ ROI and 40% increase in product sales",
+        "Before vs After comparison is clearly presented"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CaseStudies.tsx",
+          "operation": "modify",
+          "description": "Update the first case study card with complete VRH Derma details: Client Type: D2C Skincare Brand, Industry: Dermatology, Duration: October 2025 – January 2026. Display Problem section with: High acquisition cost, broad audience targeting, inconsistent campaign performance, weak funnel structure. Strategy Implemented: Built TOF–MOF–BOF full funnel structure, Refined audience targeting, Optimized ad creatives, Implemented Meta Pixel tracking, Integrated Flipkart ads, Continuous A/B testing. Budget: ₹6,40,000+ total spend (₹1.5L–₹2L monthly). Results: 640%+ ROI, 40% increase in product sales, Improved lead quality, Stable scalable performance. Before vs After: Before (Broad targeting, Unstable performance) After (Structured funnel, Improved ROI, Consistent growth). Use clean structured format with clear section headings, bullet points for strategy items, and prominent display of key metrics. Ensure the case study uses the new Green + Black + White theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add Case Study 2 for Award-Wala with B2B campaign details",
+      "acceptanceCriteria": [
+        "Award-Wala case study is added as Case Study 2",
+        "All specified details are included: client type, duration, problem, strategy, budget, results",
+        "Case study is displayed in identical clean structured format as Case Study 1",
+        "Results clearly show consistent B2B lead flow and improved targeting precision",
+        "Both case studies have consistent visual presentation"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CaseStudies.tsx",
+          "operation": "modify",
+          "description": "Update the second case study card with Award-Wala details: Client Type: B2B Recognition & Awards Business, Duration: January 2026 – February 2026. Problem: Required qualified business owner leads across India. Strategy: Pan-India Meta lead campaigns, Targeted decision-makers & business owners, Refined ad messaging for authority positioning, Structured budget allocation. Budget: ₹15,000 campaign spend. Results: Consistent B2B lead flow, Improved targeting precision, Better lead quality and filtering. Use identical structured format as Case Study 1 with matching section headings, typography, spacing, and layout. Apply Green + Black + White theme consistently. Ensure both case studies have the same visual weight and presentation style."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Optimize resume loading speed with direct file access and preloading",
+      "acceptanceCriteria": [
+        "resume.pdf is hosted in frontend/public directory",
+        "Resume link uses direct file path (not routed navigation)",
+        "Resume opens in new tab with target='_blank'",
+        "Resume link is preloaded in HTML head section",
+        "Resume file size is compressed below 1MB",
+        "Unnecessary redirect logic is removed",
+        "Resume button opens instantly without page reload delay"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/resume.pdf",
+          "operation": "create",
+          "description": "Copy the optimized resume PDF (compressed below 1MB) to frontend/public directory as resume.pdf for direct static file access. Use one of the provided resume files: Kartik_PerfMarketer_Resume 1.pdf, ensuring file size is under 1MB."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add preload link tag in the head section for faster resume access: <link rel=\"preload\" href=\"/resume.pdf\" as=\"document\">. This enables browser to preload the resume file for instant opening."
+        },
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Update resume download/view button to use direct file link href=\"/resume.pdf\" with target=\"_blank\" and rel=\"noopener noreferrer\" attributes. Remove any routed navigation logic or onClick handlers that cause page reload. Ensure the button opens the PDF instantly in a new tab without delay. Use an anchor tag instead of button element if needed for direct file access."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Render uploaded profile photo as static asset for hero section use",
+      "acceptanceCriteria": [
+        "Uploaded profile photo is saved to frontend/public/assets/generated",
+        "Image is referenced correctly in the hero section component",
+        "Image loads properly as a static asset"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/profile-photo.dim_400x400.png",
+          "operation": "create",
+          "description": "Save the uploaded profile photo (profile pic 001.png) as a static asset at frontend/public/assets/generated/profile-photo.dim_400x400.png for use in the hero section. Ensure the image is high resolution (400x400 pixels) and properly formatted for web display."
+        }
+      ]
+    }
+  ]
+}

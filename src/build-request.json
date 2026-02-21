@@ -1,0 +1,172 @@
+{
+  "kind": "build_request",
+  "title": "Update portfolio with green/black/white theme, new profile photo, case studies, and optimized resume loading",
+  "projectName": "Kartik Tyagi Portfolio",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the entire color theme to a Green + Black + White system: Use clean white background (#ffffff), deep professional green (#0f7b3f) as primary accent, strong black (#000000) as secondary accent, black for headings, dark grey for paragraph text, green filled primary buttons with white text, and black border outline buttons with hover transition to green fill. Remove all orange tones, grey background panels (unless subtle section separation), and soft pastel effects. Add subtle black stripe design accents in section dividers or headers (thin horizontal stripe lines). Maintain clean minimal aesthetic, strong contrast, and professional business look.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Change the entire color theme to a Green + Black + White system",
+          "Remove: Any orange tones, Any grey background panels",
+          "Add subtle black stripe design accents in section dividers or headers"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Background is clean white (#ffffff)",
+        "Primary accent color is deep professional green (#0f7b3f or similar)",
+        "Secondary accent is strong black (#000000)",
+        "Headings use black text, paragraphs use dark grey",
+        "Primary buttons are green with white text",
+        "Outline buttons have black border with hover transition to green fill",
+        "All orange tones are removed",
+        "Grey background panels are removed except subtle section separators",
+        "Subtle black stripe accents appear in section dividers or headers",
+        "Design maintains clean minimal aesthetic with strong contrast"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Replace the current profile image with the new professional headshot (profile pic 001.png). Apply circular crop, ensure high resolution, center align in hero section, remove any duplicate profile images from other sections (photo should appear only once on the page), and add subtle shadow under the image for depth. Do not change hero structure or typography.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Replace the current profile image with a new professional headshot",
+          "Circular crop, High resolution, Center aligned in hero section",
+          "Remove any duplicate profile image from other sections",
+          "Add subtle shadow under the image for depth"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Profile photo uses the uploaded image (profile pic 001.png)",
+        "Image is circular cropped",
+        "Image is high resolution and center aligned in hero section",
+        "Profile photo appears only once on the page (in hero section only)",
+        "Subtle shadow is added under the image",
+        "Hero section structure and typography remain unchanged"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add Case Study 1 for VRH Derma with the following details: Client Type: D2C Skincare Brand, Industry: Dermatology, Duration: October 2025 – January 2026, Problem: High acquisition cost, broad audience targeting, inconsistent campaign performance, and weak funnel structure, Strategy Implemented: Built TOF–MOF–BOF full funnel structure, Refined audience targeting, Optimized ad creatives, Implemented Meta Pixel tracking, Integrated Flipkart ads, Continuous A/B testing, Budget: ₹6,40,000+ total spend (₹1.5L–₹2L monthly), Results: 640%+ ROI, 40% increase in product sales, Improved lead quality, Stable scalable performance, Before vs After: Before (Broad targeting, Unstable performance) After (Structured funnel, Improved ROI, Consistent growth). Display in clean structured format.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Case Study 1 – VRH Derma",
+          "Client Type: D2C Skincare Brand",
+          "Duration: October 2025 – January 2026",
+          "640%+ ROI, 40% increase in product sales"
+        ]
+      },
+      "acceptanceCriteria": [
+        "VRH Derma case study is added as Case Study 1",
+        "All specified details are included: client type, industry, duration, problem, strategy, budget, results, before/after",
+        "Case study is displayed in clean structured format matching the design system",
+        "Results prominently display 640%+ ROI and 40% increase in product sales",
+        "Before vs After comparison is clearly presented"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add Case Study 2 for Award-Wala with the following details: Client Type: B2B Recognition & Awards Business, Duration: January 2026 – February 2026, Problem: Required qualified business owner leads across India, Strategy: Pan-India Meta lead campaigns, Targeted decision-makers & business owners, Refined ad messaging for authority positioning, Structured budget allocation, Budget: ₹15,000 campaign spend, Results: Consistent B2B lead flow, Improved targeting precision, Better lead quality and filtering. Display in identical clean structured format as Case Study 1.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Case Study 2 – Award-Wala",
+          "Client Type: B2B Recognition & Awards Business",
+          "Duration: January 2026 – February 2026",
+          "Budget: ₹15,000 campaign spend"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Award-Wala case study is added as Case Study 2",
+        "All specified details are included: client type, duration, problem, strategy, budget, results",
+        "Case study is displayed in identical clean structured format as Case Study 1",
+        "Results clearly show consistent B2B lead flow and improved targeting precision",
+        "Both case studies have consistent visual presentation"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Optimize resume opening speed by hosting resume.pdf in the frontend/public directory, using direct file link instead of routed navigation, opening resume in new tab using target='_blank', preloading resume link in head section for faster access, ensuring file size is compressed below 1MB, and removing unnecessary redirect logic. Resume button must open instantly without page reload delay.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Optimize resume loading performance",
+          "Host resume.pdf in the root directory",
+          "Use direct file link instead of routed navigation",
+          "Open resume in new tab using target='_blank'",
+          "Preload resume link in head section",
+          "Resume button must open instantly without page reload delay"
+        ]
+      },
+      "acceptanceCriteria": [
+        "resume.pdf is hosted in frontend/public directory",
+        "Resume link uses direct file path (not routed navigation)",
+        "Resume opens in new tab with target='_blank'",
+        "Resume link is preloaded in HTML head section",
+        "Resume file size is compressed below 1MB",
+        "Unnecessary redirect logic is removed",
+        "Resume button opens instantly without page reload delay"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Render the uploaded profile photo (profile pic 001.png) as a static asset in frontend/public/assets/generated for use as the new profile image in the hero section.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent"
+        ],
+        "quotes": [
+          "Replace the current profile image with a new professional headshot"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Uploaded profile photo is saved to frontend/public/assets/generated",
+        "Image is referenced correctly in the hero section component",
+        "Image loads properly as a static asset"
+      ]
+    }
+  ],
+  "constraints": [
+    "Maintain section order: Hero → Experience → Results → Case Studies → Services → Certifications → Contact",
+    "Do not redesign layout drastically; only apply theme and content upgrades",
+    "Keep structure and layout intact",
+    "Profile photo should appear only once on the page (in hero section only)",
+    "Do not change hero structure or typography when updating profile photo",
+    "Resume file size must be compressed below 1MB",
+    "Case studies must be displayed in identical clean structured format"
+  ],
+  "nonGoals": [
+    "Changing the overall layout structure or section arrangement",
+    "Adding new sections beyond the specified case studies",
+    "Modifying hero section structure or typography beyond profile photo replacement",
+    "Adding motivational phrases or fluff content",
+    "Implementing orange or pastel color schemes"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Professional headshot of Kartik Tyagi with circular crop, center aligned, subtle shadow, high resolution (profile-photo.dim_400x400.png)"
+    ],
+    "edits": []
+  }
+}
