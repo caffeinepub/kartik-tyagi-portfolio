@@ -1,0 +1,170 @@
+{
+  "kind": "build_request",
+  "title": "Add animated Performance Gallery to Case Study 1",
+  "projectName": "Kartik Portfolio",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a Performance Gallery subsection at the end of Case Study 1 (VRH Derma) that displays 2 Meta Ads performance screenshots showing campaign metrics including ₹1.45L and ₹3.48L total spend, 2.6M and 6.3M impressions, and detailed campaign breakdowns with results, cost per result, reach, and conversion rates",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-performance-gallery-request",
+          "msg-user-both-photos-case-study-1"
+        ],
+        "quotes": [
+          "Add performance screenshots inside each Case Study section",
+          "both photos are to be added in the case study 1 in the last"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Performance Gallery subsection appears at the end of Case Study 1",
+        "Both uploaded Meta Ads screenshots are displayed showing VR Health Science campaign data",
+        "Images are arranged in a clean grid layout"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement fade-in animation on scroll for Performance Gallery images that triggers when the gallery enters the viewport, with smooth slide-up animation effect synchronized with the fade-in",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-performance-gallery-request"
+        ],
+        "quotes": [
+          "Images should fade in on scroll",
+          "Add smooth slide-up animation when entering viewport"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Images fade in smoothly when scrolled into view",
+        "Slide-up animation occurs simultaneously with fade-in",
+        "Animation uses existing useScrollAnimation hook pattern from the codebase"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add hover effects to Performance Gallery images with subtle 1.03x scale zoom and soft shadow, ensuring the animation is smooth and professional without aggressive motion",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-performance-gallery-request"
+        ],
+        "quotes": [
+          "On hover, slightly scale up (subtle 1.03 zoom)",
+          "Add soft shadow on hover",
+          "No flashy bounce or aggressive motion"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Images scale to 1.03x on hover with smooth transition",
+        "Soft shadow appears on hover",
+        "Hover effect is subtle and professional, consistent with existing portfolio animations"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement modal lightbox functionality that opens when a Performance Gallery image is clicked, with smooth fade transition, darkened background overlay, and left/right navigation arrows to switch between images when multiple images exist",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-performance-gallery-request"
+        ],
+        "quotes": [
+          "Clicking image should open a modal lightbox view with smooth fade transition",
+          "Modal background should darken slightly",
+          "Allow left/right navigation if multiple images exist"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking an image opens a modal lightbox with enlarged view",
+        "Modal has smooth fade-in transition",
+        "Background dims when modal is open",
+        "Left and right navigation arrows allow switching between the 2 images",
+        "Clicking outside the image or pressing ESC closes the modal"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Style the Performance Gallery with the existing green/black/white theme, adding thin black borders around each screenshot, using a 2-column grid layout on desktop and 1-column layout on mobile, maintaining consistency with the portfolio's professional design system",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-performance-gallery-request"
+        ],
+        "quotes": [
+          "Maintain green, black, white theme",
+          "Add thin black border around each screenshot",
+          "Use clean grid layout (2 per row on desktop, 1 per row on mobile)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Gallery uses green (#22c55e), black (#000000), and white (#FFFFFF) from existing theme",
+        "Each screenshot has a thin black border",
+        "Desktop layout displays 2 images per row",
+        "Mobile layout displays 1 image per row",
+        "Styling is consistent with existing CaseStudies.tsx component design"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Optimize Performance Gallery images for fast loading using lazy loading, ensuring mobile responsiveness and maintaining performance standards across all viewport sizes",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-performance-gallery-request"
+        ],
+        "quotes": [
+          "Optimize image size for fast loading",
+          "Use lazy loading for screenshots",
+          "Ensure mobile responsiveness"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Images use lazy loading attribute",
+        "Gallery is fully responsive on mobile, tablet, and desktop",
+        "Images are optimized for web delivery",
+        "Performance metrics remain acceptable with image additions"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Do not modify the existing case study text content in CaseStudies.tsx, only add the Performance Gallery component and subsection at the end of Case Study 1 (VRH Derma case study)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-performance-gallery-request"
+        ],
+        "quotes": [
+          "Do not change case study text content. Only enhance with animated performance image gallery"
+        ]
+      },
+      "acceptanceCriteria": [
+        "VRH Derma case study text remains unchanged",
+        "Performance Gallery is added as a new subsection after existing content",
+        "Award-Wala case study remains unmodified"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify existing case study text content in CaseStudies.tsx",
+    "Maintain green/black/white color theme consistency",
+    "Keep animations smooth and professional without aggressive motion",
+    "Use existing useScrollAnimation hook pattern for scroll-triggered animations"
+  ],
+  "nonGoals": [
+    "Adding Performance Galleries to other case studies beyond Case Study 1",
+    "Creating new case study content or modifying existing case study text",
+    "Implementing backend data storage for images",
+    "Adding image upload functionality",
+    "Creating admin interface for managing performance screenshots"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Meta Ads performance dashboard screenshot showing VR Health Science campaigns with ₹1.45L total spend, 1.3M impressions, 571K reach, and detailed campaign metrics in tabular format (meta-ads-performance-1.dim_1200x800.png)",
+      "Meta Ads performance dashboard screenshot displaying VR Health Science campaigns with ₹3.48L total spend, 6.3M impressions, 2.1M reach, and campaign breakdown with form leads data (meta-ads-performance-2.dim_1200x800.png)"
+    ],
+    "edits": []
+  }
+}

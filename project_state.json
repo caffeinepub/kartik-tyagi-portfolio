@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Portfolio website with animated Performance Gallery feature in case studies, displaying Meta Ads performance screenshots with professional animations and modal lightbox",
+  "architectural_notes": [
+    "Performance Gallery uses lazy loading for optimized image performance",
+    "Modal lightbox system with left/right navigation for multiple images",
+    "Scroll-based animations with fade-in and slide-up entrance effects",
+    "Green/black/white color theme throughout application"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Meta Ads performance dashboard screenshot showing VR Health Science campaigns with ₹1.45L total spend, 1.3M impressions, 571K reach, and detailed campaign metrics in tabular format (meta-ads-performance-1.dim_1200x800.png)\n- Meta Ads performance dashboard screenshot displaying VR Health Science campaigns with ₹3.48L total spend, 6.3M impressions, 2.1M reach, and campaign breakdown with form leads data (meta-ads-performance-2.dim_1200x800.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-performance-gallery-subsection-at-the-end-of-case-study-1-vrh-derma-that-displays-2-meta-ads-performance-screenshots-showing-campaign-metrics-including-1-45l-and-3-48l-total-spend-2-6m-and-6-3m-impressions-and-detailed-campaign-breakdowns-with-results-cost-per-result-reach-and-conversion-rates",
+      "title": "Create a Performance Gallery subsection at the end of Case Study 1 (VRH Derma) that displays 2 Meta Ads performance screenshots showing campaign metrics including ₹1.45L and ₹3.48L total spend, 2.6M and 6.3M impressions, and detailed campaign breakdowns with results, cost per result, reach, and conversion rates",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-fade-in-animation-on-scroll-for-performance-gallery-images-that-triggers-when-the-gallery-enters-the-viewport-with-smooth-slide-up-animation-effect-synchronized-with-the-fade-in",
+      "title": "Implement fade-in animation on scroll for Performance Gallery images that triggers when the gallery enters the viewport, with smooth slide-up animation effect synchronized with the fade-in",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-hover-effects-to-performance-gallery-images-with-subtle-1-03x-scale-zoom-and-soft-shadow-ensuring-the-animation-is-smooth-and-professional-without-aggressive-motion",
+      "title": "Add hover effects to Performance Gallery images with subtle 1.03x scale zoom and soft shadow, ensuring the animation is smooth and professional without aggressive motion",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-modal-lightbox-functionality-that-opens-when-a-performance-gallery-image-is-clicked-with-smooth-fade-transition-darkened-background-overlay-and-left-right-navigation-arrows-to-switch-between-images-when-multiple-images-exist",
+      "title": "Implement modal lightbox functionality that opens when a Performance Gallery image is clicked, with smooth fade transition, darkened background overlay, and left/right navigation arrows to switch between images when multiple images exist",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-style-the-performance-gallery-with-the-existing-green-black-white-theme-adding-thin-black-borders-around-each-screenshot-using-a-2-column-grid-layout-on-desktop-and-1-column-layout-on-mobile-maintaining-consistency-with-the-portfolio-s-professional-design-system",
+      "title": "Style the Performance Gallery with the existing green/black/white theme, adding thin black borders around each screenshot, using a 2-column grid layout on desktop and 1-column layout on mobile, maintaining consistency with the portfolio's professional design system",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-optimize-performance-gallery-images-for-fast-loading-using-lazy-loading-ensuring-mobile-responsiveness-and-maintaining-performance-standards-across-all-viewport-sizes",
+      "title": "Optimize Performance Gallery images for fast loading using lazy loading, ensuring mobile responsiveness and maintaining performance standards across all viewport sizes",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-do-not-modify-the-existing-case-study-text-content-in-casestudies-tsx-only-add-the-performance-gallery-component-and-subsection-at-the-end-of-case-study-1-vrh-derma-case-study",
+      "title": "Do not modify the existing case study text content in CaseStudies.tsx, only add the Performance Gallery component and subsection at the end of Case Study 1 (VRH Derma case study)",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Animated Performance Gallery in Case Study 1 with Meta Ads screenshots, fade-in scroll animations, hover effects, and modal lightbox with navigation",
+      "reqIds": [],
+      "status": "in_progress"
+    }
+  ],
+  "projectName": "Kartik Portfolio",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

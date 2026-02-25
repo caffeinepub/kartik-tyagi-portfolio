@@ -1,0 +1,140 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-performance-gallery-subsection-at-the-end-of-case-study-1-vrh-derma-that-displays-2-meta-ads-performance-screenshots-showing-campaign-metrics-including-1-45l-and-3-48l-total-spend-2-6m-and-6-3m-impressions-and-detailed-campaign-breakdowns-with-results-cost-per-result-reach-and-conversion-rates",
+      "featureTitle": "Create a Performance Gallery subsection at the end of Case Study 1 (VRH Derma) that displays 2 Meta Ads performance screenshots showing campaign metrics including ₹1.45L and ₹3.48L total spend, 2.6M and 6.3M impressions, and detailed campaign breakdowns with results, cost per result, reach, and conversion rates",
+      "files": [
+        "frontend/src/components/CaseStudies.tsx",
+        "frontend/src/components/PerformanceGallery.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-fade-in-animation-on-scroll-for-performance-gallery-images-that-triggers-when-the-gallery-enters-the-viewport-with-smooth-slide-up-animation-effect-synchronized-with-the-fade-in",
+      "featureTitle": "Implement fade-in animation on scroll for Performance Gallery images that triggers when the gallery enters the viewport, with smooth slide-up animation effect synchronized with the fade-in",
+      "files": [
+        "frontend/src/components/PerformanceGallery.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-hover-effects-to-performance-gallery-images-with-subtle-1-03x-scale-zoom-and-soft-shadow-ensuring-the-animation-is-smooth-and-professional-without-aggressive-motion",
+      "featureTitle": "Add hover effects to Performance Gallery images with subtle 1.03x scale zoom and soft shadow, ensuring the animation is smooth and professional without aggressive motion",
+      "files": [
+        "frontend/src/components/PerformanceGallery.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-modal-lightbox-functionality-that-opens-when-a-performance-gallery-image-is-clicked-with-smooth-fade-transition-darkened-background-overlay-and-left-right-navigation-arrows-to-switch-between-images-when-multiple-images-exist",
+      "featureTitle": "Implement modal lightbox functionality that opens when a Performance Gallery image is clicked, with smooth fade transition, darkened background overlay, and left/right navigation arrows to switch between images when multiple images exist",
+      "files": [
+        "frontend/src/components/ImageLightbox.tsx",
+        "frontend/src/components/PerformanceGallery.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-style-the-performance-gallery-with-the-existing-green-black-white-theme-adding-thin-black-borders-around-each-screenshot-using-a-2-column-grid-layout-on-desktop-and-1-column-layout-on-mobile-maintaining-consistency-with-the-portfolio-s-professional-design-system",
+      "featureTitle": "Style the Performance Gallery with the existing green/black/white theme, adding thin black borders around each screenshot, using a 2-column grid layout on desktop and 1-column layout on mobile, maintaining consistency with the portfolio's professional design system",
+      "files": [
+        "frontend/src/components/PerformanceGallery.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-optimize-performance-gallery-images-for-fast-loading-using-lazy-loading-ensuring-mobile-responsiveness-and-maintaining-performance-standards-across-all-viewport-sizes",
+      "featureTitle": "Optimize Performance Gallery images for fast loading using lazy loading, ensuring mobile responsiveness and maintaining performance standards across all viewport sizes",
+      "files": [
+        "frontend/src/components/PerformanceGallery.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-do-not-modify-the-existing-case-study-text-content-in-casestudies-tsx-only-add-the-performance-gallery-component-and-subsection-at-the-end-of-case-study-1-vrh-derma-case-study",
+      "featureTitle": "Do not modify the existing case study text content in CaseStudies.tsx, only add the Performance Gallery component and subsection at the end of Case Study 1 (VRH Derma case study)",
+      "files": [
+        "frontend/src/components/CaseStudies.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

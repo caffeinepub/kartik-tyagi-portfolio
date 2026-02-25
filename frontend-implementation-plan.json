@@ -1,0 +1,134 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add animated Performance Gallery to Case Study 1",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a Performance Gallery subsection at the end of Case Study 1 (VRH Derma) displaying 2 Meta Ads performance screenshots with campaign metrics",
+      "acceptanceCriteria": [
+        "Performance Gallery subsection appears at the end of Case Study 1",
+        "Both uploaded Meta Ads screenshots are displayed showing VR Health Science campaign data",
+        "Images are arranged in a clean grid layout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PerformanceGallery.tsx",
+          "operation": "create",
+          "description": "Create a new PerformanceGallery component that displays Meta Ads performance screenshots in a responsive grid layout. The component will accept an array of image objects with src and alt properties. It will render images with thin black borders, lazy loading, and proper accessibility attributes. The component will display 2 images per row on desktop and 1 per row on mobile using Tailwind grid classes. Reference the generated images at frontend/public/assets/generated/meta-ads-performance-1.dim_1200x800.png and frontend/public/assets/generated/meta-ads-performance-2.dim_1200x800.png."
+        },
+        {
+          "path": "frontend/src/components/CaseStudies.tsx",
+          "operation": "modify",
+          "description": "Add the PerformanceGallery component at the end of the VRH Derma case study (Case Study 1) without modifying any existing text content. Import the PerformanceGallery component and insert it after the existing content sections (Problem, Strategy, Budget, Results, Key Metrics, Before/After). Pass the two generated Meta Ads performance images as props using the workspace paths frontend/public/assets/generated/meta-ads-performance-1.dim_1200x800.png and frontend/public/assets/generated/meta-ads-performance-2.dim_1200x800.png. Do not modify the Award-Wala case study."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement fade-in animation on scroll for Performance Gallery images with synchronized slide-up effect",
+      "acceptanceCriteria": [
+        "Images fade in smoothly when scrolled into view",
+        "Slide-up animation occurs simultaneously with fade-in",
+        "Animation uses existing useScrollAnimation hook pattern from the codebase"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PerformanceGallery.tsx",
+          "operation": "modify",
+          "description": "Integrate the existing useScrollAnimation hook to trigger fade-in and slide-up animations when the gallery enters the viewport. Apply transition classes that combine opacity changes with transform translateY for the slide-up effect. Use the same animation pattern found in other portfolio components (ExtendedCapabilities.tsx, Services.tsx) to maintain consistency. Each image should animate independently with a slight stagger delay if appropriate."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add hover effects to Performance Gallery images with subtle 1.03x scale zoom and soft shadow",
+      "acceptanceCriteria": [
+        "Images scale to 1.03x on hover with smooth transition",
+        "Soft shadow appears on hover",
+        "Hover effect is subtle and professional, consistent with existing portfolio animations"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PerformanceGallery.tsx",
+          "operation": "modify",
+          "description": "Add hover interaction styles to gallery images using Tailwind classes. Apply hover:scale-[1.03] with smooth transition-transform duration. Add a soft shadow on hover using hover:shadow-lg or similar. Ensure the transition is smooth (transition-all duration-300) and professional without aggressive motion. The hover effect should be consistent with the design system used in other components like CoreSkills.tsx and Services.tsx."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement modal lightbox functionality with smooth transitions and navigation between images",
+      "acceptanceCriteria": [
+        "Clicking an image opens a modal lightbox with enlarged view",
+        "Modal has smooth fade-in transition",
+        "Background dims when modal is open",
+        "Left and right navigation arrows allow switching between the 2 images",
+        "Clicking outside the image or pressing ESC closes the modal"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ImageLightbox.tsx",
+          "operation": "create",
+          "description": "Create a reusable ImageLightbox component that displays an image in a modal overlay. The component should accept props for the current image index, image array, and close handler. Implement a darkened background overlay (bg-black/80 or similar), smooth fade-in transition for the modal appearance, and display the enlarged image centered on screen. Add left and right navigation arrows (using Lucide icons or similar) that allow switching between images when multiple exist. Implement keyboard navigation (arrow keys for navigation, ESC to close) and click-outside-to-close functionality. Use React state to manage the current image index. Ensure the modal is accessible with proper focus management."
+        },
+        {
+          "path": "frontend/src/components/PerformanceGallery.tsx",
+          "operation": "modify",
+          "description": "Integrate the ImageLightbox component into PerformanceGallery. Add click handlers to each gallery image that open the lightbox with the clicked image. Manage lightbox open/closed state and current image index using React useState. Pass the image array and handlers to the ImageLightbox component. Ensure clicking an image triggers the lightbox to open with smooth animation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Style the Performance Gallery with green/black/white theme, thin borders, and responsive grid layout",
+      "acceptanceCriteria": [
+        "Gallery uses green (#22c55e), black (#000000), and white (#FFFFFF) from existing theme",
+        "Each screenshot has a thin black border",
+        "Desktop layout displays 2 images per row",
+        "Mobile layout displays 1 image per row",
+        "Styling is consistent with existing CaseStudies.tsx component design"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PerformanceGallery.tsx",
+          "operation": "modify",
+          "description": "Apply the portfolio's design system colors to the Performance Gallery. Use the existing theme colors: professional-green (#22c55e), strong-black (#000000), and white (#FFFFFF) as defined in tailwind.config.js. Add a thin black border (border border-strong-black or border-2 border-black) around each screenshot. Implement responsive grid layout using Tailwind: grid grid-cols-1 md:grid-cols-2 gap-6 or similar. Add a section heading with the black stripe header pattern used in other sections (e.g., About.tsx, CoreSkills.tsx). Maintain visual consistency with CaseStudies.tsx styling including spacing, typography, and card presentation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Optimize Performance Gallery images for fast loading with lazy loading and mobile responsiveness",
+      "acceptanceCriteria": [
+        "Images use lazy loading attribute",
+        "Gallery is fully responsive on mobile, tablet, and desktop",
+        "Images are optimized for web delivery",
+        "Performance metrics remain acceptable with image additions"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PerformanceGallery.tsx",
+          "operation": "modify",
+          "description": "Add loading='lazy' attribute to all img elements for native browser lazy loading. Ensure images are responsive using appropriate sizing classes (w-full h-auto object-cover or similar). Add responsive breakpoints for mobile, tablet, and desktop viewports. Consider adding width and height attributes to prevent layout shift. The gallery should adapt gracefully across all screen sizes while maintaining the grid layout requirements (1 column mobile, 2 columns desktop)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Preserve existing case study text content while adding Performance Gallery to Case Study 1 only",
+      "acceptanceCriteria": [
+        "VRH Derma case study text remains unchanged",
+        "Performance Gallery is added as a new subsection after existing content",
+        "Award-Wala case study remains unmodified"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CaseStudies.tsx",
+          "operation": "modify",
+          "description": "Carefully add the PerformanceGallery component to the VRH Derma case study only without modifying any existing text content. Place the gallery after all existing sections (Problem, Strategy, Budget, Results, Key Metrics, Before/After Comparison). Do not alter the Award-Wala case study structure or content. Verify that all existing case study text, headings, bullet points, and metrics remain exactly as they are. Only the PerformanceGallery component should be added as a new subsection."
+        }
+      ]
+    }
+  ]
+}
